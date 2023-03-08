@@ -1,16 +1,37 @@
 
+<style>
 
+
+color = "pink"
+
+
+</style>
 <script>
 
  const gifURL = "https://i.gifer.com/4xjK.gif"
 
+ function CreateGif (x, y) {
+   const gif = document.createElement('img')
+   gif.src = gifURL
+   document.body.appendChild(gif)
+   gif.style.width = gifW + 'px'
+   gif.style.height = gifH + 'px'
+   gif.style.position = 'absolute'
+ }
 
 
   function setup () {
+    for (let i = 0; i < 10; i++) {
+      createGif()
+    }
+    }
     const gif = document.createElement("img") //img
     gif.src = gifURL // <img src="https://i.gifer.com/4xjK.gif"
     document.body.appendChild(gif)
 
+
+}
+  
   }
 
   function draw () {
