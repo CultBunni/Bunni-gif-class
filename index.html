@@ -9,6 +9,8 @@ color = "pink"
 <script>
 
  const gifURL = "https://i.gifer.com/4xjK.gif"
+ const gifW = 50
+ const gifH = 50
 
  function CreateGif (x, y) {
    const gif = document.createElement('img')
@@ -17,11 +19,14 @@ color = "pink"
    gif.style.width = gifW + 'px'
    gif.style.height = gifH + 'px'
    gif.style.position = 'absolute'
+   gif.style.left = x + 'px' 
+   gif.style.top = y + 'px'
  }
 
 
   function setup () {
     for (let i = 0; i < 10; i++) {
+      cons
       createGif()
     }
     }
